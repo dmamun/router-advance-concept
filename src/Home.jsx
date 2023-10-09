@@ -1,18 +1,14 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import PhonesItem from './PhonesItem';
 
 const Home = () => {
     const Phones=useLoaderData();
-    console.log(Phones)
+    console.log(Phones);
     return (
         <div>
-          {
-            Phones.map(phones=><Phones key={phones.id} phones={phones}></Phones>)
-
-          }
-            
-          
-            
+          <PhonesItem phones={Phones}></PhonesItem>
+       
         </div>
     );
 };
